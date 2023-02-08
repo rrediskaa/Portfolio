@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/icon-styles.css">                                          <!-- icons CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">                                    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/main-styles.css">                                          <!-- main CSS -->
+    
+    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>                      <!-- Swiper JS -->
+    <script src="https://kit.fontawesome.com/d60c40b0cb.js" crossorigin="anonymous"></script>   <!-- icons JS --> 
+    <script src="js/index.js"></script>                                                         <!-- main JS --> 
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>                       <!-- JQuery JS -->
+
+    <title>Project Gamma</title>    
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".swiper").css("display", "none");
+            $(".anim-div").css("display", "none");
+            $(".swiper").fadeIn(1000);
+            $(".anim-div").fadeIn(1000);
+        });
+    </script>
+    
+    <!-- This page only styles -->
+    <style>
+        html,
+        body{
+        position:relative;
+        height: 100%;
+        }
+        body{
+        position:relative;
+        height: 150%;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="title">
+            <span>Portfolio</span>
+        </div>
+    </header>
+
+    <div class="anim-div">
+        <i class="fa-regular fa-circle-dot anim-div-element"></i>
+    </div>
+
+
+
+    <!-- <section class="swiper-wrapper"> -->
+    <!-- Swiper title-->
+    <span class="swiper-title">Online Portfolio</span>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/img1-portfolio.png"></div>
+        <div class="swiper-slide"><img src="images/img2-portfolio.png"></div>
+        <div class="swiper-slide"><img src="images/img3-portfolio.png"></div>
+        <div class="swiper-slide"><img src="images/img4-portfolio.png"></div>
+      </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-description">A collection of my projects and demonstration of my skills 
+        in HTML, CSS, JavaScript and coding in general. </div>
+   
+        <span class="swiper-title">Project Beta</span>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"> 
+                <div class="video-player">
+                    
+                    <video controls id="video1">
+                        <source  src="images/media-website-video1.mp4">
+                        
+                    </video>
+                </div>
+            </div>
+          </div>
+          
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-description">A simple website about Social Media with links labeled to button-looking containers and hover effects.
+        </div>
+
+    
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <nav id="nav-bar">
+        <ul id="nav-ul">
+            <li class="nav-li" id="nav-li-menu">
+                <a class="nav-link" id="nav-link-menu"> <!--onclick="expandNav()"-->
+                    <i class="fa-solid fa-bars"></i> 
+                    <span class="nav-text">MENU</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-home"></i>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="edu.html" class="nav-link">
+                    <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                    <span class="nav-text">Education</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="work.html" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="pro.html" class="nav-link active-page">
+             <!--   <i class="fa-solid fa-folder"></i>  -->
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+</body>
+</html>

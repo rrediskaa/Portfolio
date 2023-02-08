@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/icon-styles.css">                                          <!-- icons CSS -->
+    <script src="https://kit.fontawesome.com/d60c40b0cb.js" crossorigin="anonymous"></script>   <!-- icons JS --> 
+    <link rel="stylesheet" href="css/main-styles.css">                                          <!-- main CSS -->
+    <script src="js/index.js"></script>                                                         <!-- main JS --> 
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>                       <!-- JQuery JS -->
+    <title>Project Gamma</title>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("section").css("display", "none");
+            $(".anim-div").css("display", "none");
+            $("section").fadeIn(1000);
+            $(".anim-div").fadeIn(1000);
+        });
+    </script>
+</head>
+<body>
+    <div class="anim-div">
+        <i class="fa-regular fa-circle-dot anim-div-element"></i>
+    </div>
+
+    <section class="intro">
+        <div class="intro-hi">
+            Hi, I'm  
+            <span class="intro-name">Iskandar Abdullaev</span>
+        </div>
+        <div class="intro-summary">IT-program student looking for an opportunity to continue building his 
+            career and reaching new peaks and highs. Over 4-months experience working in a team for a Real 
+            Estate Agent. Attended numerous business meetings and effectively communicated with clients over 
+            the phone/emails. 2-years’ experience with Java, HTML, CSS, JavaScript, and SQL. Hands on experience 
+            with Front-end frameworks using Visual Paradigm, Figma and Adobe XD. Essential understanding of Git 
+            technology and mild experience with GitHub.  
+        </div>                   
+    </section>
+
+    <nav id="nav-bar">
+        <ul id="nav-ul">
+            <li class="nav-li" id="nav-li-menu">
+                <a class="nav-link" id="nav-link-menu"> <!--onclick="expandNav()"-->
+                    <i class="fa-solid fa-bars"></i> 
+                    <span class="nav-text">MENU</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="index.html" class="nav-link active-page">
+                    <i class="fa-solid fa-home"></i>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="edu.html" class="nav-link">
+                    <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                    <span class="nav-text">Education</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="work.html" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="pro.html" class="nav-link">
+             <!--   <i class="fa-solid fa-folder"></i>  -->
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+</body>
+</html>

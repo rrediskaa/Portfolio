@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/icon-styles.css">                                          <!-- icons CSS -->
+    <script src="https://kit.fontawesome.com/d60c40b0cb.js" crossorigin="anonymous"></script>   <!-- icons JS --> 
+    <link rel="stylesheet" href="css/main-styles.css">                                          <!-- main CSS -->
+    <script src="js/index.js"></script>                                                         <!-- main JS --> 
+    <script type="text/javascript" src="js/jquery-3.6.1.min.js"></script>                       <!-- JQuery JS --> 
+    <title>Project Gamma</title>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".timeline-wrapper").css("display", "none");
+            $(".anim-div").css("display", "none");
+            $(".timeline-wrapper").fadeIn(1000);
+            $(".anim-div").fadeIn(1000);     
+    
+    
+            $("a.nav-link").click(function(event){S
+            event.preventDefault();
+            linkLocation = this.href;
+            $(".timeline-wrapper").fadeOut(10000, redirectPage);      
+            });
+         
+        function redirectPage() {
+            window.location = linkLocation;
+        }
+    });
+    </script>
+</head>
+<body>
+    <div class="anim-div">
+        <i class="fa-regular fa-circle-dot anim-div-element"></i>
+    </div>
+
+    <header>
+        <div class="title">
+            <span>Education</span>
+        </div>
+    </header>
+    <div class="timeline-wrapper">
+        <ul class="sessions">
+            <li class="timeline-li">
+                <div class="timeline-title">Sheridan College - 
+                    <a class ="over-link" 
+                        href="https://www.sheridancollege.ca/programs/computer-systems-technology-software-development-and-network-engineering" target="_blank">
+                        Software Development and Network Engineering      
+                    </a>
+                </div>
+                <p class="timeline-year">Sept 2021 - Enrolled</p>
+                <p> 
+                    Software development in Spring Boot and <!--.NET, Angular, C, Kotlin, Swift, Udemy -->
+                    Full-stack <!-- and LAMP stack --> web development.
+                    Database administration technologies including MySQL and MS SQL Server. <!-- NoSQL, and Big Data-->
+                    Advanced networking<!--AWS--> and Azure Clouds.<!--, and 5G wireless training.-->
+                    A capstone project where we designed and developed a real-world software solution.  
+                </p>
+            </li>
+            <li class="timeline-li">
+                <div class="timeline-title">ILAC - <a class ="over-link" 
+                    href="https://www.ilac.com/pathway/" target="_blank">
+                    University Pathway Program      
+                </a></div>
+                <p>July 2020 - Oct 2020</p>
+                <p>Ideal for ambitious students of all levels and backgrounds who want to access world-leading 
+                    education in Canada. Acceptance to most of ILAC’s 90+ Pathway partner colleges and 
+                    universities without IELTS and TOEFL.</p>
+            </li>
+        </ul>
+    </div>
+
+    <nav id="nav-bar">
+        <ul id="nav-ul">
+            <li class="nav-li" id="nav-li-menu">
+                <a class="nav-link" id="nav-link-menu"> <!--onclick="expandNav()"-->
+                    <i class="fa-solid fa-bars"></i> 
+                    <span class="nav-text">MENU</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="index.html" class="nav-link">
+                    <i class="fa-solid fa-home"></i>
+                    <span class="nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="edu.html" class="nav-link active-page">
+                    <i class="fa-sharp fa-solid fa-graduation-cap"></i>
+                    <span class="nav-text">Education</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="work.html" class="nav-link">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <span class="nav-text">Experience</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="pro.html" class="nav-link">
+             <!--   <i class="fa-solid fa-folder"></i>  -->
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span class="nav-text">Portfolio</span>
+                </a>
+            </li>
+            <li class="nav-li">
+                <a href="contact.html" class="nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </li>  
+        </ul>
+    </nav>
+</body>
+</html>
