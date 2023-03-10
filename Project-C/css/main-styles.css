@@ -3,6 +3,7 @@
     font-size: 16px;
     scrollbar-color: #91C1D8 #ffffff;
     scrollbar-width: thin;
+    --sky-blue: #91C1D8;
     --bg-primary: #edf9ff;
     --bg-secondary: #dee9ef;
     --nav-primary: #045389;
@@ -12,7 +13,8 @@
     --pastel-purple: #be91cb;
     --pastel-yellow: #fffae2;
     --pastel-orange: #fee7db;
-
+    --default-margin-left: 5rem;
+    --default-margin-left-small: 1rem;
 }
 
 body{
@@ -33,6 +35,7 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 }
 
 .anim-div-element{
+    z-index: -1;
     opacity: 0.3;
     position: fixed;
     -webkit-animation: rotate-loop 10s linear infinite;
@@ -120,6 +123,41 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     color: black;
 }
 
+.skills-wrapper{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: var(--default-margin-left);
+    margin-right: 8rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    color: black;
+}
+
+.skill{
+    width: 200px;
+    text-align: center;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.skill img{
+    width: 105px;
+    height: auto;
+}
+.skill:hover{
+    background-color: var(--sky-blue);
+}
+.skills-title{
+    margin-left: var(--default-margin-left);
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--nav-secondary);
+}
+
 
 /*-------------------------------------- CONTACT PAGE ---------------------------------------*/
 .title{
@@ -181,6 +219,8 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 }
 
 
+
+
 /*--------------------------------------  EDU/WORK PAGE  ---------------------------------------*/
 .timeline-wrapper{
     margin-right: 9rem;
@@ -230,7 +270,7 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 
 /*--------------------------------------  PRO PAGE  ---------------------------------------*/
 .swiper {
-    height: 60%;
+    height: 600px;
 }
 
 .swiper-title{
@@ -272,13 +312,13 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 .swiper-slide img, video{
     display: block;
     border: solid var(--nav-secondary) 1px;
-    height: 88%;
+    height: 500px;
     object-fit: cover;
     padding: 0;
     border-radius: 0.6rem;
 }
 
-video{
+/* video{
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -293,7 +333,7 @@ video{
     position: absolute;
     bottom: 4rem;
     left: 15rem;
-}
+} */
 
 .swiper {
     margin-left: 5rem;
@@ -325,27 +365,22 @@ video{
         -o-animation: rotate-loop 3s linear infinite;
         animation: rotate-loop 3s linear infinite;
     }
-
     #nav-bar{
         bottom: 0;
         width: 100vw;
         height: 5rem;
     }
-
     #nav-ul{
         flex-direction: row;
     }
-
     .nav-link{
         justify-content: center;
         text-align: center;
     }
-
     .nav-link:hover{
         background-color: var(--nav-hover);
         color: var(--bg-primary);
     }
-
     #nav-li-menu{
         display:none;
         margin-left: 0;
@@ -357,11 +392,9 @@ video{
         margin-right: 0;
         margin-left: 1rem;
     }
-
     .intro-name{
         font-size: 4rem;
     }
-
     .intro-summary{
         margin-top: 1rem;
         margin-right: 2rem;
@@ -386,7 +419,6 @@ video{
         justify-content: center;
         padding-left: 0;
     }
-    
     .contact-li{
         font-size: 1.5rem;
     }
@@ -398,14 +430,43 @@ video{
         padding-right: 2rem;
         margin-bottom: 10rem;
     }
-
     .timeline-title{
         font-size: 1.8rem;
     }
-
     .timeline-li {
         font-weight: 300;
         font-size: 1.3rem;
+    }
+
+    #pro-title{
+        margin-bottom: 5rem;
+    }
+
+    .swiper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background: linear-gradient(to bottom, var(--pastel-purple) 0%, var(--pastel-orange)  70%);
+        border-radius: 1rem;
+        height: 200px;
+    }
+    .swiper-title{
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+    .swiper-slide img, video{
+        height: 130px;
+        object-fit: cover;
+        padding: 0;
+        border-radius: 0.6rem;
+    }
+    .swiper-description{
+        color: black;
+        font-weight: 300;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        margin-right: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 6rem;
     }
 }
 
