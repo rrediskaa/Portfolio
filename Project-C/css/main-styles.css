@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 :root{
     font-size: 16px;
     scrollbar-color: #91C1D8 #ffffff;
@@ -17,8 +18,7 @@
     --default-margin-left-small: 1rem;
 }
 
-body{
-    
+body{ 
     font-family: Poppins, sans-serif;
     margin: 0;
     padding: 0;
@@ -53,10 +53,22 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     -webkit-text-fill-color: transparent;
 }
 
+a{
+    text-decoration: none;
+}
+
+.code-link{
+    font-weight: 500;
+    background-color: var(--bg-secondary);
+    padding: 0.5em;
+    border-radius: 0.2em;
+    width: 100%;
+}
+
 
 /*--------------------------------------  NAV BAR  ---------------------------------------*/
 #nav-bar{
-    border: var(--nav-secondary) solid;
+    border: 1px var(--nav-secondary) solid;
     position: fixed;
     align-items: center;
     transition: width 500ms ease;
@@ -64,13 +76,16 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 }
 
 #nav-ul{
+    animation: fadeIn 1s;
     font-size: 1.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    background-color: var(--bg-primary);
+    border-radius: 1em;
 }
 
 .nav-li{
@@ -125,9 +140,14 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     color: black;
 }
 
+.techterm{
+    font-family: Work Sans, sans-serif;
+    font-weight: 400;
+}
+
 .skills-wrapper{
     margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 }
 .skills{
     display: flex;
@@ -151,7 +171,8 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     height: auto;
 }
 .skill:hover{
-    background-color: var(--sky-blue);
+    outline: 1px solid var(--sky-blue);
+    border-radius: 0.1em;
 }
 .skills-title{
     margin-left: var(--default-margin-left);
@@ -196,10 +217,6 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     color: var(--nav-secondary);
     height: auto;
     max-width: 100vw;
-
-    /* padding: 0.5rem;
-    background-color: white;
-    border-radius: 1rem; */
 }
     
 .contact-li i{
@@ -315,28 +332,12 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 .swiper-slide img, video{
     display: block;
     border: solid var(--nav-secondary) 1px;
-    height: 500px;
+    max-height: 510px;
     object-fit: cover;
     padding: 0;
     border-radius: 0.6rem;
+    max-width: 1000px;
 }
-
-/* video{
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.video-player{
-    display: block;
-    height: 88%;
-}
-
-.play-button{
-    display: none;
-    position: absolute;
-    bottom: 4rem;
-    left: 15rem;
-} */
 
 .swiper {
     margin-left: 5rem;
@@ -348,12 +349,12 @@ body::-webkit-scrollbar-track{background: #ffffff;}
 .swiper-pagination, 
 .swiper-button-prev,
 .swiper-button-next{
-    color:var(--nav-secondary); 
+    color:var(--bg-primary); 
 }
 
 /*--------------------------------------  MEDIA QUERIES  ---------------------------------------*/
 /* Small Screens */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 660px){
     
     .anim-div-element{
         font-size: 10rem;
@@ -408,7 +409,7 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     }
     .skills-wrapper{
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 5em;
     }
     .skills-title{
         font-size: 2em;
@@ -417,12 +418,14 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     .skills{
         margin-right: 0;
         margin-left: 0;
+        margin-top: 1em;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
     .skill{
-        width: 150px;
+        width: 170px;
+        margin:0;
     }
 
     header .title{
@@ -440,15 +443,18 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     .contact-ul{
         padding-top: 0rem;
         padding-bottom: 0rem;
+
         align-items: center;
         justify-content: center;
         padding-left: 0;
         padding-right: 0;
         margin:0;
+        margin-bottom: 1.5em;
         max-width: 100%;
     }
     .contact-li{
         font-size: 1.5rem;
+        padding: 0rem;
     }
 
     .timeline-wrapper {
@@ -456,7 +462,7 @@ body::-webkit-scrollbar-track{background: #ffffff;}
         padding-top: 4rem;
         padding-left: 0rem;
         padding-right: 2rem;
-        margin-bottom: 10rem;
+        margin-bottom: 5rem;
     }
     .timeline-title{
         font-size: 1.8rem;
@@ -489,13 +495,16 @@ body::-webkit-scrollbar-track{background: #ffffff;}
     }
     .swiper-description{
         margin:1rem;
-        padding:0;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+        padding-top: 0.5em;
+        padding-bottom: 4em;
     }
 }
 
 
 /*------------------------------------ Large Screens------------------------------------ */
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 661px){
     .anim-div-element{
         font-size: 19rem;
         top: -10rem;
